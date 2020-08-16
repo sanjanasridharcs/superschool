@@ -72,14 +72,23 @@
     </style>
   </head>
   <body>
-    <div id="header">Welcome Super Student! Please Login.</div>
+    <div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <div id="header">Welcome Super Student!</div>
     <div id="space"></div>
     <div class="login-box">
         <form>
             <label for="username" style="font-size: 40px; margin-bottom: 20px;">Username</label>
-            <input type="text" id="username" name="username" placeholder="Please enter your school username"><br>
+            <input type="text" id="username" name="username" placeholder="Enter Username"><br>
             <label for="password" style="font-size: 40px; margin-bottom: 30px; margin-top: 20px;">Password</label>
-            <input type="password" id="password" name="password" placeholder="Please enter your password">
+            <input type="password" id="password" name="password" placeholder="Enter Password">
             <input type="submit" value="Login">
         </form>
     </div>
