@@ -1,1 +1,1 @@
-superschool!!
+startschool.wm.r.appspot.com
