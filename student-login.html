@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poiret+One">
+    <style>
+      #header {
+        width:100%;
+        height:180px;
+        text-align: center;
+        line-height: 180px;
+        font-size: 80px;
+        color: white;
+        font-family: 'Poiret One';
+        background-color: #00dbaa;
+      }
+      #space {
+        width: 100%;
+        height: 50px;
+      }
+      .login-box {
+        width: 30%;
+        height: 300px;
+        margin: auto;
+        padding: 2%;
+        font-family: 'Poiret One';
+        text-align: center;
+        color: white;
+        background-color: #00dbaa;
+        border-radius: 12px;
+      }
+      input[type=submit] {
+        font-size: 40px;
+        font-family: 'Poiret One';
+        margin-top: 20px;
+        border: none;
+        border-radius: 8px;
+        color: black;
+        padding: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      input[type=text] {
+        width: 100%;
+        padding: 10px 15px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        background-color: #b3ffee;
+        color: black;
+        font-size: 20px;
+        border-radius: 8px;
+      }
+      input[type=password] {
+        width: 100%;
+        padding: 10px 15px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        background-color: #b3ffee;
+        color: black;
+        font-size: 20px;
+        border-radius: 8px;
+      }
+      input[type=text]:focus {
+        background-color: white;
+      }
+      input[type=password]:focus {
+        background-color: white;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="header">Welcome Super Student! Please Login.</div>
+    <div id="space"></div>
+    <div class="login-box">
+        <form>
+            <label for="username" style="font-size: 40px; margin-bottom: 20px;">Username</label>
+            <input type="text" id="username" name="username" placeholder="Please enter your school username"><br>
+            <label for="password" style="font-size: 40px; margin-bottom: 30px; margin-top: 20px;">Password</label>
+            <input type="password" id="password" name="password" placeholder="Please enter your password">
+            <input type="submit" value="Login">
+        </form>
+    </div>
+  </body>
+</html>
+

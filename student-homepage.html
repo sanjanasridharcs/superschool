@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poiret+One">
+    <style>
+      #landing-header {
+        width:100%;
+        height:100px;
+        padding-left: 50px;
+        line-height: 100px;
+        font-size: 50px;
+        color: white;
+        font-family: 'Poiret One';
+        background-color:#ff6378;
+      }
+      #landing-space {
+        width: 100%;
+        height: 50px;
+      }
+      .landing-option {
+        width: 46%;
+        height: 300px;
+        position: relative;
+        float: left;
+        margin: 2%;
+        font-family: 'Poiret One';
+        text-align: center;
+        color: white;
+        font-size: 50px;
+        border: none;
+        border-radius: 12px;
+      }
+      #landing-student {
+        background-color: #00dbaa;
+      }
+      #landing-teacher {
+        background-color: #0fcfdd;
+      }
+    </style>
+    <script>
+        var today = true;
+        var todayheader = document.getElementById('today');
+        var comingupheader = document.getElementById('coming-up');
+        var todaycontent = document.getElementById('today-content');
+        var comingupcontent = document.getElementById('coming-up-content');
+        if (today) {
+            todayheader.style.color = black;
+            todayheader.style.backgroundColor = white;
+            comingupheader.style.color = white;
+            todayheader.style.backgroundColor = '#ff6378';
+            $todaycontent.show();
+            $comingupcontent.hide();
+        } else {
+            todayheader.style.color = white;
+            todayheader.style.backgroundColor = '#ff6378';
+            comingupheader.style.color = black;
+            todayheader.style.backgroundColor = black;
+            $todaycontent.hide();
+            $comingupcontent.show();
+        }
+    </script>
+  </head>
+  <body>
+    <div id="landing-header">
+        <div id="today" style="display: inline-block">Today</div>
+        <div id="coming-up" style="display: inline-block; padding-left: 150px; box-sizing: border-box">Coming Up</div>
+    </div>
+    <div id="landing-space"></div>
+    <div id="today-content">
+        Today!
+    </div>
+    <div id="coming-up-content">
+        Tomorrow!
+    </div>
+  </body>
+</html>

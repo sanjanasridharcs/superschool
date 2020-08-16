@@ -16,15 +16,33 @@
 
 // [START gae_node_request_example]
 const express = require('express');
-
+const path = require('path');
 const app = express();
+const router = express.Router();
 
-app.get('/', (req, res) => {
-  res.status(200).send('Hello, world!').end();
+router.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname + '/landing.html'));
+});
+
+router.get('/student-login', (req, res) => {
+  res.sendFile(path.join(__dirname + '/student-login.html'));
+});
+
+router.get('/student', (req, res) => {
+  res.sendFile(path.join(__dirname + '/student-homepage.html'));
+});
+
+router.get('/teacher-login', (req, res) => {
+  res.sendFile(path.join(__dirname + '/teacher-login.html'));
+});
+
+router.get('/teacher', (req, res) => {
+  res.sendFile(path.join(__dirname + '/teacher-homepage.html'));
 });
 
 // Start the server
 const PORT = process.env.PORT || 8080;
+app.use('/', router);
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}`);
   console.log('Press Ctrl+C to quit.');
@@ -32,3 +50,4 @@ app.listen(PORT, () => {
 // [END gae_node_request_example]
 
 module.exports = app;
+
