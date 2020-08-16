@@ -3,9 +3,13 @@
   <head>
     <link rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Poiret+One">
+      <link rel="icon"
+      type="image/jpg"
+      href="https://www.goodfreephotos.com/albums/vector-images/big-pencil-vector-art.png">
+
     <style>
       #landing-header {
-        width:100%;
+        width:96%;
         height:100px;
         padding-left: 50px;
         line-height: 100px;
@@ -18,60 +22,121 @@
         width: 100%;
         height: 50px;
       }
-      .landing-option {
-        width: 46%;
-        height: 300px;
-        position: relative;
-        float: left;
-        margin: 2%;
-        font-family: 'Poiret One';
-        text-align: center;
-        color: white;
-        font-size: 50px;
+      .header-button {
+        display: inline-block; 
+        margin-left: 50px; 
+        box-sizing: border-box;
         border: none;
-        border-radius: 12px;
+        font-family: 'Poiret One';
+        font-size: 50px;
+        height: 100px;
       }
-      #landing-student {
-        background-color: #00dbaa;
+      #coming-up {
+        background-color: #ff6378;
       }
-      #landing-teacher {
-        background-color: #0fcfdd;
+      #today {
+        background-color: white;
       }
-    </style>
-    <script>
-        var today = true;
-        var todayheader = document.getElementById('today');
-        var comingupheader = document.getElementById('coming-up');
-        var todaycontent = document.getElementById('today-content');
-        var comingupcontent = document.getElementById('coming-up-content');
-        if (today) {
-            todayheader.style.color = black;
-            todayheader.style.backgroundColor = white;
-            comingupheader.style.color = white;
-            todayheader.style.backgroundColor = '#ff6378';
-            $todaycontent.show();
-            $comingupcontent.hide();
-        } else {
-            todayheader.style.color = white;
-            todayheader.style.backgroundColor = '#ff6378';
-            comingupheader.style.color = black;
-            todayheader.style.backgroundColor = black;
-            $todaycontent.hide();
-            $comingupcontent.show();
+      #date-box {
+          width: 150px;
+          height: 200px;
+          background-color: #cccccc;
+          border-radius: 12px;
+          margin-left: 50px;
+          padding-top: 15px;
+          float: left;
+      }
+      #actual-date {
+          font-size: 75px;
+          font-family: 'Poiret One';
+          width: 50%;
+          margin: auto;
+          text-align: center;
+          padding: 10px;
+          color: #00dbaa;
+          background-color: white;
+          border-radius: 12px;
+      }
+      #actual-month {
+          font-size: 40px;
+          font-family: 'Poiret One';
+          width: 100%;
+          margin: auto;
+          text-align: center;
+          padding-top: 10px;
+      }
+      .piechart { 
+            margin-top: 250px; 
+            margin-left: 25px;
+            width: 150px; 
+            height: 150px; 
+            border-radius: 50%; 
+            padding: 25px;
+            background-image: conic-gradient( 
+                #00dbaa 70deg,    
+                #cccccc 0); 
+                
+        } 
+        .extra-circle {
+            background-color: white;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 150px;
+            font-family: 'Poiret One';
+            font-size: 40px;
         }
-    </script>
+        .classIcon {
+            float: left;
+        }
+    </style>
+    
   </head>
   <body>
+    
     <div id="landing-header">
-        <div id="today" style="display: inline-block">Today</div>
-        <div id="coming-up" style="display: inline-block; padding-left: 150px; box-sizing: border-box">Coming Up</div>
+        <button class="header-button" id="today">Today</button>
+        <button class="header-button" id="coming-up">Coming Up</button>
     </div>
     <div id="landing-space"></div>
-    <div id="today-content">
-        Today!
+    <div>
+        <div id="today-content">
+            <div id="date-box">
+                <div id="actual-date"></div>
+                <div id="actual-month"></div>
+            </div>
+        </div>
+
+        <div class="classIcon" style="margin-left: 200px; border-radius: 50%; background-color: #cccccc; width: 200px; height: 200px;">
+            <span style="padding: 20px; position: relative; top: 20px">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Arithmetic_symbols.svg/315px-Arithmetic_symbols.svg.png" alt="math-icon" width="150px" height="150px">
+            </span>
+        </div>
+        <div class="classIcon" style="margin-left: 100px; border-radius: 50%; background-color: #cccccc; width: 200px; height: 200px;">
+            <span style="padding: 20px; position: relative; top: 20px">
+                <img src="https://miro.medium.com/max/1050/1*jLoeB_BP4k0P1zdTyZYuNA.png" alt="math-icon" width="150px" height="150px">
+            </span>
+        </div>
+        <div class="classIcon" style="margin-left: 100px; border-radius: 50%; background-color: #cccccc; width: 200px; height: 200px;"></div>
     </div>
-    <div id="coming-up-content">
-        Tomorrow!
+
+    <div>
+        <div class="piechart">
+            <div class="extra-circle">Progress</div>
+        </div>
+        <div class="classIcon" style="margin-left: 400px; margin-top: -200px; border-radius: 50%; background-color: #cccccc; width: 200px; height: 200px;"></div>
+        <div class="classIcon" style="margin-left: 700px; margin-top: -200px; border-radius: 50%; background-color: #cccccc; width: 200px; height: 200px;"></div>
+        <div class="classIcon" style="margin-left: 1000px; margin-top: -200px; border-radius: 50%; background-color: #cccccc; width: 200px; height: 200px;"></div>
     </div>
+    <script>
+        n = new Date();
+        d = n.getDate();
+        m = n.getMonth();
+        var monthArr = ["January", "February","March", "April", "May", "June", "July", "August", "September", "October", "November","December"];
+        m = monthArr[m];
+        document.getElementById("actual-date").innerHTML = d;
+        document.getElementById("actual-month").innerHTML = m;
+    </script>
   </body>
 </html>

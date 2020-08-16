@@ -19,6 +19,9 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const router = express.Router();
+var firebase = require('firebase/app');
+require('firebase/auth');
+
 
 router.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/landing.html'));

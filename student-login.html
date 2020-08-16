@@ -3,6 +3,10 @@
   <head>
     <link rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Poiret+One">
+    <link rel="icon"
+      type="image/jpg"
+      href="https://www.goodfreephotos.com/albums/vector-images/big-pencil-vector-art.png">
+
     <style>
       #header {
         width:100%;
@@ -97,12 +101,33 @@ function googleTranslateElementInit() {
             <input type="text" id="username" name="username" placeholder="Enter Username"><br>
             <label for="password" style="font-size: 40px; margin-bottom: 30px; margin-top: 20px;">Password</label>
             <input type="password" id="password" name="password" placeholder="Enter Password">
-            <input type="submit" value="Login">
+            <input type="submit" value="Login" onclick="window.location.href='/student'">
         </form>
     </div>
     <div class="bottom-right">
     <img src="https://www.jing.fm/clipimg/full/11-119573_backpack-clipart-png-blue-backpack-clipart.png" alt="Backpack" class="backpack-image">
     </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "",
+        authDomain: "super-school-hack20.firebaseapp.com",
+        databaseURL: "https://super-school-hack20.firebaseio.com",
+        projectId: "super-school-hack20",
+        storageBucket: "super-school-hack20.appspot.com",
+        messagingSenderId: "230589271137",
+        appId: "1:230589271137:web:32d132ff7ff943e4beee20"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
   </body>
 </html>
 
