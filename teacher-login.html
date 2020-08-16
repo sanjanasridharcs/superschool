@@ -68,20 +68,41 @@
       input[type=password]:focus {
         background-color: white;
       }
-
+	.bottom-right {
+  		position: absolute;
+  		bottom: 0px;
+  		right: 0px;
+	}
+    .books-image {
+    	width:180px;
+        height:180px;
+    }
     </style>
   </head>
   <body>
-    <div id="header">Welcome Super Teacher! Please Login.</div>
+   <div id="google_translate_element"></div>
+
+  <script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+  }
+  </script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <div id="header">Welcome Super Teacher!</div>
     <div id="space"></div>
     <div class="login-box">
         <form>
             <label for="username" style="font-size: 40px; margin-bottom: 20px;">Username</label>
-            <input type="text" id="username" name="username" placeholder="Please enter your school username"><br>
+            <input type="text" id="username" name="username" placeholder="Enter username"><br>
             <label for="password" style="font-size: 40px; margin-bottom: 30px; margin-top: 20px;">Password</label>
-            <input type="password" id="password" name="password" placeholder="Please enter your password">
+            <input type="password" id="password" name="password" placeholder="Enter password">
             <input type="submit" value="Login">
         </form>
+    </div>
+    </div>
+    <div class="bottom-right">
+    <img src="https://www.macroamerica.com/wp-content/uploads/2010/03/books.png" alt="Books" class="books-image">
     </div>
   </body>
 </html>
